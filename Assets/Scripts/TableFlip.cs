@@ -4,15 +4,38 @@ using UnityEngine;
 
 public class TableFlip : MonoBehaviour
 {
-    // Start is called before the first frame update
-    void Start()
+    // Assign these in the Inspector
+    public GameObject objectToHide;
+    public GameObject objectToHide2;
+    public GameObject objectToHide3;
+    public GameObject objectToHide4;
+    public GameObject objectToReveal;
+
+    private void Start()
     {
         
     }
-
-    // Update is called once per frame
-    void Update()
+    private void OnTriggerStay2D (Collider2D other)
+    { 
+        if (other.CompareTag("Player"))
+        {
+            Debug.Log("entered");
+            if (Input.GetKeyDown(KeyCode.F))
+            {
+                Debug.Log("Flipped");
+                SwapObjects();
+            }
+        }
+    }
+    public void SwapObjects()
     {
-        
+        // Hide the first object
+        objectToHide.SetActive(false);
+        objectToHide2.SetActive(false);
+        objectToHide3.SetActive(false);
+        objectToHide4.SetActive(false);
+
+        // Reveal the second object
+        objectToReveal.SetActive(true);
     }
 }
