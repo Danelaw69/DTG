@@ -5,6 +5,7 @@ using UnityEngine.SceneManagement;
 
 public class ExitButton : MonoBehaviour
 {
+    public bool OptionsMenuActive = false;
     // Start is called before the first frame update
     void Start()
     {
@@ -14,7 +15,12 @@ public class ExitButton : MonoBehaviour
     // Update is called once per frame
     void Update()
     {
-
+        if (Input.GetKeyDown(KeyCode.Escape) || OptionsMenuActive == false)
+        {
+            GameObject.Find("Buttons").transform.localScale = new Vector2(1, 1);
+            GameObject.Find("Options").transform.localScale = new Vector2(0, 0);
+            OptionsMenuActive = true;
+        }
     }
     public void doExitGame()
     {
@@ -25,12 +31,14 @@ public class ExitButton : MonoBehaviour
     {
         GameObject.Find("Buttons").transform.localScale = new Vector2(0, 0);
         GameObject.Find("Options").transform.localScale = new Vector2(1, 1);
+        OptionsMenuActive = true;
 
     }
     public void doBack()
     {
         GameObject.Find("Buttons").transform.localScale = new Vector2(1, 1);
         GameObject.Find("Options").transform.localScale = new Vector2(0, 0);
+        OptionsMenuActive = false;
     }
     public void doStartGame()
     {
