@@ -1,20 +1,25 @@
 using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
-
-public class PlayerHealth : MonoBehaviour
+public class Health : MonoBehaviour
 {
-    public float health = 6f;
-
-    // Start is called before the first frame update
+    public int CurrentHealth = 0;
+    public int MaxHealth = 6;
+    public HealthBar healthBar;
     void Start()
     {
-        
+        CurrentHealth = MaxHealth;
     }
-
-    // Update is called once per frame
     void Update()
     {
-        
+        if (Input.GetKeyDown(KeyCode.Mouse1))
+        {
+            DamagePlayer(1); 
+        }
+    }
+    public void DamagePlayer(int damage)
+    {
+        CurrentHealth -= damage;
+        healthBar.SetHealth(CurrentHealth);
     }
 }
