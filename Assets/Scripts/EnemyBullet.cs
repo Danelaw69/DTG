@@ -1,7 +1,7 @@
 using UnityEngine;
-using MyGame.Enemy;
+using MyGame.Player;
 
-public class Bullet : MonoBehaviour
+public class EnemyBullet : MonoBehaviour
 {
     public float speed = 10f; // Bullet speed
     public float damage = 5f; // Damage the bullet inflicts
@@ -26,15 +26,18 @@ public class Bullet : MonoBehaviour
 
     private void OnTriggerEnter2D(Collider2D collision)
     {
-        // Check if the bullet hits an enemy
-        if (collision.CompareTag("Enemy") || collision.CompareTag("Wall"))
+        // Check if the bullet hits the player or a wall
+        if (collision.CompareTag("Player") || collision.CompareTag("Wall"))
         {
-            // Apply damage to the enemy
-            // Assuming your Enemy script is in the same namespace as Bullet
-            Enemy enemy = collision.GetComponent<Enemy>();
-            if (enemy != null)
+            // Apply damage to the player (if it's the player)
+            if (collision.CompareTag("Player"))
             {
-                enemy.TakeDamage(damage);
+                // Assuming your Player script is in the same namespace as Bullet
+                PlayerController playerController = collision.GetComponent<PlayerController>();
+                if (playerController != null)
+                {
+                    playerController.TakeDamage(damage);
+                }
             }
 
             // Destroy the bullet
