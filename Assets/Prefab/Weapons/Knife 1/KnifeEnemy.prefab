@@ -74,7 +74,7 @@ SpriteRenderer:
   m_SortingLayerID: 0
   m_SortingLayer: 0
   m_SortingOrder: 2
-  m_Sprite: {fileID: 7482667652216324306, guid: 311925a002f4447b3a28927169b83ea6, type: 3}
+  m_Sprite: {fileID: 21300000, guid: bda06c1a0c5278846b7aee21458e5891, type: 3}
   m_Color: {r: 1, g: 1, b: 1, a: 1}
   m_FlipX: 0
   m_FlipY: 0
@@ -97,7 +97,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 956af2dd562bc9c489d5f8eca8777fb2, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  bulletSpeed: 1
-  attackSpeed: 1
+  EbulletSpeed: 1
+  EattackSpeed: 1
   playerTransform: {fileID: 4785906457742602777, guid: ff019ab3f7dbb474c9bfb0216e66499b, type: 3}
   projectilePrefab: {fileID: 6623504421008870561, guid: ce94e629ecd6a274087d223c3a8ea0bf, type: 3}
