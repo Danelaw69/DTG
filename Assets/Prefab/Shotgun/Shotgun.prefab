@@ -97,10 +97,8 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: bb1d6c684ef56824ba4de09eb35f2ccc, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  damage: 5
   bulletSpeed: 1
-  attackSpeed: 1.5
-  bulletRange: 1
+  attackSpeed: 0.7
   playerTransform: {fileID: 2166366885965447517, guid: 5dac3538c1e33ec4ba5dc2fc22192e56, type: 3}
   distance: 0.5
   projectilePrefab: {fileID: 6623504421008870561, guid: f3318384c4e2fd44295e94c46db88816, type: 3}
