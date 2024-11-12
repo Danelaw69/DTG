@@ -1512,6 +1512,8 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: f80ab3244c1097b4a99e8b8bd0321e45, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  maxHealth: 10
+  currentHealth: 0
   target: {fileID: 819389744}
 --- !u!195 &1796557500
 NavMeshAgent:
@@ -3468,7 +3470,7 @@ GameObject:
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
-  m_IsActive: 0
+  m_IsActive: 1
 --- !u!114 &9088490087916738810
 MonoBehaviour:
   m_ObjectHideFlags: 0
