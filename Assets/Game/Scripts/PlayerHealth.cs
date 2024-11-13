@@ -1,25 +1,35 @@
+using JetBrains.Annotations;
 using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
-public class PlayerHealth : MonoBehaviour
+
+namespace MyGame.playerHealth
 {
-    public int CurrentHealth = 0;
-    public int MaxHealth = 6;
-    public HealthBar healthBar;
-    void Start()
+    public class PlayerHealth : MonoBehaviour
     {
-        CurrentHealth = MaxHealth;
-    }
-    void Update()
-    {
-        if (Input.GetKeyDown(KeyCode.Mouse1))
+        public int CurrentHealth = 0;
+        public int MaxHealth = 6;
+        public HealthBar healthBar;
+        public bool playerAlive = true;
+        void Start()
         {
-            DamagePlayer(1); 
+            CurrentHealth = MaxHealth;
         }
-    }
-    public void DamagePlayer(int damage)
-    {
-        CurrentHealth -= damage;
-        healthBar.SetHealth(CurrentHealth);
+        void Update()
+        {
+            if (Input.GetKeyDown(KeyCode.Mouse1))
+            {
+                DamagePlayer(1);
+            }
+            if (CurrentHealth < 1)
+            {
+                playerAlive = false;
+            }
+        }
+        public void DamagePlayer(int damage)
+        {
+            CurrentHealth -= damage;
+            healthBar.SetHealth(CurrentHealth);
+        }
     }
 }

@@ -10,6 +10,7 @@ public class ExitButton : MonoBehaviour
     void Start()
     {
         GameObject.Find("Options").transform.localScale = new Vector2(0, 0);
+        GameObject.Find("Controls").transform.localScale = new Vector2(0, 0);
     }
 
     // Update is called once per frame
@@ -19,8 +20,13 @@ public class ExitButton : MonoBehaviour
         {
             GameObject.Find("Buttons").transform.localScale = new Vector2(1, 1);
             GameObject.Find("Options").transform.localScale = new Vector2(0, 0);
+            GameObject.Find("Controls").transform.localScale = new Vector2(0, 0);
             OptionsMenuActive = true;
         }
+    }
+    public void doStartGame()
+    {
+        SceneManager.LoadScene(1);
     }
     public void doExitGame()
     {
@@ -38,10 +44,12 @@ public class ExitButton : MonoBehaviour
     {
         GameObject.Find("Buttons").transform.localScale = new Vector2(1, 1);
         GameObject.Find("Options").transform.localScale = new Vector2(0, 0);
+        GameObject.Find("Controls").transform.localScale = new Vector2(0, 0);
         OptionsMenuActive = false;
     }
-    public void doStartGame()
+    public void doControls()
     {
-        SceneManager.LoadScene(1);
+        GameObject.Find("Options").transform.localScale = new Vector2(0, 0);
+        GameObject.Find("Controls").transform.localScale = new Vector2(1, 1);
     }
 }
