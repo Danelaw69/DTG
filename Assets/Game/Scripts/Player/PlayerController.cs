@@ -7,10 +7,6 @@ namespace MyGame.Player
     public class PlayerController : MonoBehaviour
     {
         [SerializeField] private float movmentSpeed = 4f;
-        //
-        public float maxHealth = 10f;
-        public float currentHealth;
-        //
         public float dashRange = 0.4f;
         public float dashSpeed = 8.0f;
         public float dashCooldown = 1.0f;
@@ -29,9 +25,6 @@ namespace MyGame.Player
         {
             activeMoveSpeed = movmentSpeed;
             rb = GetComponent<Rigidbody2D>();
-            //
-            currentHealth = maxHealth;
-            //
         }
 
         // Update is called once per frame
@@ -68,29 +61,6 @@ namespace MyGame.Player
         {
             rb.velocity = movementDirection * activeMoveSpeed;
         }
-        //
-        public void TakeDamage(float damageAmount)
-        {
-            currentHealth -= damageAmount; // Reduce health by the damage amount
-
-            // Check if the enemy is dead
-            if (currentHealth <= 0f)
-            {
-                Die(); // Call the Die function when health reaches zero
-            }
-        }
-        //
-        private void Die()
-        {
-            // Add your death logic here:
-            // - Play death animation
-            // - Destroy the enemy object
-            // - Drop loot (optional)
-            // - Trigger events (optional)
-
-            Destroy(gameObject); // Destroy the enemy object
-        }
-        //
     }
 
 }

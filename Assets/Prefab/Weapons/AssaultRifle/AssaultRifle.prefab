@@ -10,7 +10,7 @@ GameObject:
   m_Component:
   - component: {fileID: 6063403754266045555}
   - component: {fileID: 4601714927750770110}
-  - component: {fileID: 8224466097843939796}
+  - component: {fileID: 734704344900069290}
   m_Layer: 0
   m_Name: AssaultRifle
   m_TagString: Untagged
@@ -85,7 +85,7 @@ SpriteRenderer:
   m_WasSpriteAssigned: 1
   m_MaskInteraction: 0
   m_SpriteSortPoint: 0
---- !u!114 &8224466097843939796
+--- !u!114 &734704344900069290
 MonoBehaviour:
   m_ObjectHideFlags: 0
   m_CorrespondingSourceObject: {fileID: 0}
@@ -94,13 +94,11 @@ MonoBehaviour:
   m_GameObject: {fileID: 620419977854212799}
   m_Enabled: 1
   m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: bb1d6c684ef56824ba4de09eb35f2ccc, type: 3}
+  m_Script: {fileID: 11500000, guid: 3e6a0e12bad68d44c95acecee842677d, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  damage: 5
   bulletSpeed: 1
-  attackSpeed: 0.1
-  bulletRange: 1
-  playerTransform: {fileID: 2166366885965447517, guid: 5dac3538c1e33ec4ba5dc2fc22192e56, type: 3}
+  attackSpeed: 1
+  playerTransform: {fileID: 0}
   distance: 0.5
   projectilePrefab: {fileID: 6623504421008870561, guid: 7a08cc50ef383c64d865f18a4582725f, type: 3}

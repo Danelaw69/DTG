@@ -1,4 +1,5 @@
 using UnityEngine;
+using static UnityEngine.GraphicsBuffer;
 
 public class BaseGun : MonoBehaviour
 {
@@ -11,6 +12,19 @@ public class BaseGun : MonoBehaviour
 
     private float nextFireTime = 0f; // Time of the next allowed shot
 
+    void Start()
+    {
+        GameObject playerObject = GameObject.FindGameObjectWithTag("Player");
+        if (playerObject != null)
+        {
+            // Store the player's transform
+            playerTransform = playerObject.transform;
+        }
+        else
+        {
+            Debug.LogError("Player not found!");
+        }
+    }
     void Update()
     {
         // Get the mouse position in world space

@@ -10,6 +10,19 @@ public class EnemyGunBase : MonoBehaviour
 
     private float nextFireTime = 0f; // Time of the next allowed shot
 
+    void Start()
+    {
+        GameObject playerObject = GameObject.FindGameObjectWithTag("Player");
+        if (playerObject != null)
+        {
+            // Store the player's transform
+            playerTransform = playerObject.transform;
+        }
+        else
+        {
+            Debug.LogError("Player not found!");
+        }
+    }
     void Update()
     {
         // Only fire if the player is within a certain range

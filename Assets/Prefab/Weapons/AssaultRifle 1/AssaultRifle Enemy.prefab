@@ -10,7 +10,7 @@ GameObject:
   m_Component:
   - component: {fileID: 6063403754266045555}
   - component: {fileID: 4601714927750770110}
-  - component: {fileID: 4647190969456659529}
+  - component: {fileID: -134248376579639222}
   m_Layer: 0
   m_Name: AssaultRifle Enemy
   m_TagString: Untagged
@@ -85,7 +85,7 @@ SpriteRenderer:
   m_WasSpriteAssigned: 1
   m_MaskInteraction: 0
   m_SpriteSortPoint: 0
---- !u!114 &4647190969456659529
+--- !u!114 &-134248376579639222
 MonoBehaviour:
   m_ObjectHideFlags: 0
   m_CorrespondingSourceObject: {fileID: 0}
@@ -94,10 +94,10 @@ MonoBehaviour:
   m_GameObject: {fileID: 620419977854212799}
   m_Enabled: 1
   m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: 956af2dd562bc9c489d5f8eca8777fb2, type: 3}
+  m_Script: {fileID: 11500000, guid: e0c02701fda12bd4a9ce2a23894216a3, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  bulletSpeed: 1
-  attackSpeed: 1
-  playerTransform: {fileID: 4785906457742602777, guid: ff019ab3f7dbb474c9bfb0216e66499b, type: 3}
+  EbulletSpeed: 1
+  EattackSpeed: 1
+  playerTransform: {fileID: 0}
   projectilePrefab: {fileID: 6623504421008870561, guid: dc554741d48949243a12bf8d776d15b5, type: 3}

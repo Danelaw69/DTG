@@ -1,5 +1,5 @@
 using UnityEngine;
-using MyGame.Player;
+using MyGame.playerHealth;
 
 public class EnemyBullet : MonoBehaviour
 {
@@ -33,15 +33,17 @@ public class EnemyBullet : MonoBehaviour
             if (collision.CompareTag("Player"))
             {
                 // Assuming your Player script is in the same namespace as Bullet
-                PlayerController playerController = collision.GetComponent<PlayerController>();
-                if (playerController != null)
+                PlayerHealth playerHealth = collision.GetComponent<PlayerHealth>();
+                if (playerHealth != null)
                 {
-                    playerController.TakeDamage(damage);
+                    playerHealth.DamagePlayer(1);
                 }
+
             }
 
             // Destroy the bullet
             Destroy(gameObject);
         }
     }
+
 }

@@ -2,6 +2,7 @@ using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
 using UnityEngine.UI;
+using MyGame.playerHealth;
 public class HealthBar : MonoBehaviour
 {
     public Slider healthBar;

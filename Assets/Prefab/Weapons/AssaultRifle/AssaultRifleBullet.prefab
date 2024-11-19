@@ -10,9 +10,9 @@ GameObject:
   m_Component:
   - component: {fileID: 2760738162517127810}
   - component: {fileID: 6199205417306398111}
-  - component: {fileID: 5956822391598312466}
   - component: {fileID: -4083063131546154119}
   - component: {fileID: 8680306862551244976}
+  - component: {fileID: 8438476755962422854}
   m_Layer: 0
   m_Name: AssaultRifleBullet
   m_TagString: Untagged
@@ -87,21 +87,6 @@ SpriteRenderer:
   m_WasSpriteAssigned: 1
   m_MaskInteraction: 0
   m_SpriteSortPoint: 0
---- !u!114 &5956822391598312466
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 6623504421008870561}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: 1e4e752c480a1ed40a2c37c5979c5f40, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
-  speed: 20
-  damage: 2
-  range: 7
 --- !u!61 &-4083063131546154119
 BoxCollider2D:
   m_ObjectHideFlags: 0
@@ -174,3 +159,18 @@ Rigidbody2D:
   m_SleepingMode: 1
   m_CollisionDetection: 0
   m_Constraints: 0
+--- !u!114 &8438476755962422854
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 6623504421008870561}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: b7b552ed62ce90544a061e31d7199a35, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  speed: 10
+  damage: 5
+  range: 5
