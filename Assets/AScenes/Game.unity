@@ -1760,12 +1760,16 @@ MonoBehaviour:
       m_Calls: []
     m_ActionId: 985744bc-c02c-427b-91e8-9616e08e1cdd
     m_ActionName: Gameplay/Shoot
+  - m_PersistentCalls:
+      m_Calls: []
+    m_ActionId: e05bc2ad-e11d-474e-ad36-b30adeb2532d
+    m_ActionName: Gameplay/Dash
   m_NeverAutoSwitchControlSchemes: 0
   m_DefaultControlScheme: 
   m_DefaultActionMap: Gameplay
   m_SplitScreenIndex: -1
   m_Camera: {fileID: 0}
---- !u!114 &1485096538
+--- !u!114 &1485096544
 MonoBehaviour:
   m_ObjectHideFlags: 0
   m_CorrespondingSourceObject: {fileID: 0}
@@ -1774,10 +1778,15 @@ MonoBehaviour:
   m_GameObject: {fileID: 1485096518}
   m_Enabled: 1
   m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: 80323f039740f1942b04b48c703a08f2, type: 3}
+  m_Script: {fileID: 11500000, guid: e95f9269a785ba84bb92631bfacdc6df, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  _speed: 7
+  movmentSpeed: 4
+  maxHealth: 10
+  currentHealth: 0
+  dashRange: 0.4
+  dashSpeed: 8
+  dashCooldown: 1
 --- !u!1 &1492778024
 GameObject:
   m_ObjectHideFlags: 0
@@ -3561,9 +3570,6 @@ PrefabInstance:
     m_AddedComponents:
     - targetCorrespondingSourceObject: {fileID: 2794820396020320862, guid: 5dac3538c1e33ec4ba5dc2fc22192e56, type: 3}
       insertIndex: -1
-      addedObject: {fileID: 1485096538}
-    - targetCorrespondingSourceObject: {fileID: 2794820396020320862, guid: 5dac3538c1e33ec4ba5dc2fc22192e56, type: 3}
-      insertIndex: -1
       addedObject: {fileID: 1485096523}
     - targetCorrespondingSourceObject: {fileID: 2794820396020320862, guid: 5dac3538c1e33ec4ba5dc2fc22192e56, type: 3}
       insertIndex: -1
@@ -3571,6 +3577,9 @@ PrefabInstance:
     - targetCorrespondingSourceObject: {fileID: 2794820396020320862, guid: 5dac3538c1e33ec4ba5dc2fc22192e56, type: 3}
       insertIndex: -1
       addedObject: {fileID: 1485096533}
+    - targetCorrespondingSourceObject: {fileID: 2794820396020320862, guid: 5dac3538c1e33ec4ba5dc2fc22192e56, type: 3}
+      insertIndex: -1
+      addedObject: {fileID: 1485096544}
   m_SourcePrefab: {fileID: 100100000, guid: 5dac3538c1e33ec4ba5dc2fc22192e56, type: 3}
 --- !u!224 &2900143862540495498
 RectTransform:
