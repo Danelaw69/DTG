@@ -10,9 +10,9 @@ GameObject:
   m_Component:
   - component: {fileID: 3223764317193480325}
   - component: {fileID: 5413585201751298644}
-  - component: {fileID: 4300736082998623966}
   - component: {fileID: -8519266999976701842}
   - component: {fileID: -3393516881837846835}
+  - component: {fileID: 7314744138573882766}
   m_Layer: 0
   m_Name: BossProjectile
   m_TagString: Untagged
@@ -87,21 +87,6 @@ SpriteRenderer:
   m_WasSpriteAssigned: 1
   m_MaskInteraction: 0
   m_SpriteSortPoint: 0
---- !u!114 &4300736082998623966
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 5156391301831263992}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: 8448c2c059c992145b3d8374b9bf7405, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
-  speed: 10
-  damage: 5
-  range: 5
 --- !u!50 &-8519266999976701842
 Rigidbody2D:
   serializedVersion: 4
@@ -174,3 +159,18 @@ BoxCollider2D:
   serializedVersion: 2
   m_Size: {x: 1, y: 1}
   m_EdgeRadius: 0
+--- !u!114 &7314744138573882766
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 5156391301831263992}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 94c8dd97d3351d149ad76278e49db984, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  speed: 10
+  damage: 5
+  range: 5

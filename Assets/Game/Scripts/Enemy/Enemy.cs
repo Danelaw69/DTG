@@ -54,7 +54,7 @@ namespace MyGame.Enemy
             // Check if the enemy is dead
             if (currentHealth <= 0f)
             {
-                Die(); // Call the Die function when health reaches zero
+                //Die(); // Call the Die function when health reaches zero
             }
         }
 
