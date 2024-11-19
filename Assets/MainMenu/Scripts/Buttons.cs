@@ -22,6 +22,10 @@ public class ExitButton : MonoBehaviour
             OptionsMenuActive = true;
         }
     }
+    public void doStartGame()
+    {
+        SceneManager.LoadScene(1);
+    }
     public void doExitGame()
     {
         Application.Quit();
@@ -40,8 +44,8 @@ public class ExitButton : MonoBehaviour
         GameObject.Find("Options").transform.localScale = new Vector2(0, 0);
         OptionsMenuActive = false;
     }
-    public void doStartGame()
+    public void doControls()
     {
-        SceneManager.LoadScene(1);
+        GameObject.Find("Options").transform.localScale = new Vector2(0, 0);
     }
 }

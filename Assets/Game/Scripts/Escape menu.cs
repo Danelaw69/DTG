@@ -50,15 +50,14 @@ public class Escapemenu : MonoBehaviour
         GameObject.Find("Escape Menu Buttons").transform.localScale = new Vector2(0, 0);
         GameObject.Find("OptionsMenu").transform.localScale = new Vector2(1, 1);
     }
-    public void doExitGame()
-    {
-        Application.Quit();
-        Debug.Log("Game Closed");
-    }
     public void doMainMenu()
     {
         SceneManager.LoadScene(0);
         Time.timeScale = 1;
-        EscapeMenuActive = false;
+    }
+    public void doExitGame()
+    {
+        Application.Quit();
+        Debug.Log("Game Closed");
     }
 }
