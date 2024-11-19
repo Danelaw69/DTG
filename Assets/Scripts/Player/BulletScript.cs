@@ -40,5 +40,19 @@ public class Bullet : MonoBehaviour
             // Destroy the bullet
             Destroy(gameObject);
         }
+
+        if (collision.CompareTag("Boss") || collision.CompareTag("Wall"))
+        {
+            // Apply damage to the enemy
+            // Assuming your Enemy script is in the same namespace as Bullet
+            BulletHellen Boss = collision.GetComponent<BulletHellen>();
+            if (Boss != null)
+            {
+                Boss.TakeDamage(damage);
+            }
+
+            // Destroy the bullet
+            Destroy(gameObject);
+        }
     }
 }

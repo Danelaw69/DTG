@@ -6,13 +6,13 @@ namespace MyGame.Player
 {
     public class PlayerController : MonoBehaviour
     {
-        [SerializeField] private float movmentSpeed = 2f;
+        [SerializeField] private float movmentSpeed = 4f;
         //
         public float maxHealth = 10f;
         public float currentHealth;
         //
-        public float dashRange = 5f;
-        public float dashSpeed = 1.0f;
+        public float dashRange = 0.4f;
+        public float dashSpeed = 8.0f;
         public float dashCooldown = 1.0f;
 
         private float activeMoveSpeed;

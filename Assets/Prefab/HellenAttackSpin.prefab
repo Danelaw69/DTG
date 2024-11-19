@@ -9,7 +9,7 @@ GameObject:
   serializedVersion: 6
   m_Component:
   - component: {fileID: 7971963766335522287}
-  - component: {fileID: 8162249366651039439}
+  - component: {fileID: 3879165782059882673}
   m_Layer: 0
   m_Name: HellenAttackSpin
   m_TagString: Untagged
@@ -32,7 +32,7 @@ Transform:
   m_Children: []
   m_Father: {fileID: 0}
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
---- !u!114 &8162249366651039439
+--- !u!114 &3879165782059882673
 MonoBehaviour:
   m_ObjectHideFlags: 0
   m_CorrespondingSourceObject: {fileID: 0}
@@ -44,7 +44,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 8fbff866e37020744b4ae65ebec78883, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  shotPrefab: {fileID: 6623504421008870561, guid: ebc0822c94b567441a314120f0275ddc, type: 3}
-  shotCount: 15
+  shotPrefab: {fileID: 5156391301831263992, guid: cb2c258ddc94d064b80ae1f6af57201d, type: 3}
+  shotCount: 20
   shotSpeed: 3
-  shotSpread: 10
+  shotSpread: 5

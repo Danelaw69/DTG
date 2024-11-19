@@ -10,12 +10,25 @@ namespace MyGame.Enemy
         public float maxHealth = 10f; // Maximum health of the enemy
         public float currentHealth; // Current health of the enemy
 
-        public Transform target; // The target the enemy should walk towards
+        private Transform target; // The target the enemy should walk towards
 
         private NavMeshAgent agent; // Reference to the NavMeshAgent
 
         private void Start()
         {
+            GameObject playerObject = GameObject.FindGameObjectWithTag("Player");
+
+            if (playerObject != null)
+            {
+                // Store the player's transform
+                target = playerObject.transform;
+            }
+            else
+            {
+                Debug.LogError("Player not found!");
+            }
+
+
             agent = GetComponent<NavMeshAgent>(); // Get the NavMeshAgent component
             agent.updateRotation = false; // Optional: Disable rotation updates
             agent.updateUpAxis = false; // Optional: Disable up axis updates
