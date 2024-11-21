@@ -162,5 +162,5 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   speed: 10
-  damage: 2.5
+  damage: 10
   range: 5

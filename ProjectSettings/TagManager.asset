@@ -9,6 +9,7 @@ TagManager:
   - Table
   - Wall
   - Boss
+  - Room
   layers:
   - Default
   - TransparentFX

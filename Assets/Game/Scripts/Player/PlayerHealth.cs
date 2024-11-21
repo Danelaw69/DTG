@@ -21,9 +21,13 @@ namespace MyGame.playerHealth
             {
                 DamagePlayer(1);
             }
-            if (CurrentHealth < 1)
+            if (CurrentHealth <= 0)
             {
+                Time.timeScale = 0;
+                GameObject.Find("End Screen Buttons").transform.localScale = new Vector2(1, 1);
+                GameObject.Find("Menu Background").transform.localScale = new Vector2(1, 1);
                 playerAlive = false;
+
             }
         }
         public void DamagePlayer(int damage)

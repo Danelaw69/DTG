@@ -1,5 +1,6 @@
 using UnityEngine;
 using MyGame.Enemy;
+using MyGame.bulletHellen;
 
 public class Bullet : MonoBehaviour
 {
