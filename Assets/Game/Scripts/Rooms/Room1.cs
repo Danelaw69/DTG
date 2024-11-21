@@ -20,7 +20,7 @@ public class Room1 : MonoBehaviour
     {
         if (CombatActive == false)
         {
-            GameObject.Find("Room 1").transform.localScale = new Vector2(0, 0);
+            GameObject.Find("Room 1").transform.localScale = new Vector2(0, 0); 
         }
     }
     private void OnTriggerEnter2D(Collider2D collision)
