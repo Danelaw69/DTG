@@ -8030,6 +8030,10 @@ PrefabInstance:
       value: 1.05
       objectReference: {fileID: 0}
     - target: {fileID: 3923562326804632944, guid: 9420a275716fc7543a356a92b2f54d6a, type: 3}
+      propertyPath: m_Enabled
+      value: 1
+      objectReference: {fileID: 0}
+    - target: {fileID: 3923562326804632944, guid: 9420a275716fc7543a356a92b2f54d6a, type: 3}
       propertyPath: m_Offset.x
       value: 0
       objectReference: {fileID: 0}
@@ -8038,8 +8042,16 @@ PrefabInstance:
       value: 0.06
       objectReference: {fileID: 0}
     - target: {fileID: 3923562326804632944, guid: 9420a275716fc7543a356a92b2f54d6a, type: 3}
+      propertyPath: m_IsTrigger
+      value: 1
+      objectReference: {fileID: 0}
+    - target: {fileID: 3923562326804632944, guid: 9420a275716fc7543a356a92b2f54d6a, type: 3}
       propertyPath: m_AutoTiling
       value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 3923562326804632944, guid: 9420a275716fc7543a356a92b2f54d6a, type: 3}
+      propertyPath: m_ExcludeLayers.m_Bits
+      value: 256
       objectReference: {fileID: 0}
     - target: {fileID: 6072465255660072223, guid: 9420a275716fc7543a356a92b2f54d6a, type: 3}
       propertyPath: m_Name
