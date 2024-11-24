@@ -2594,6 +2594,11 @@ SpriteRenderer:
   m_WasSpriteAssigned: 1
   m_MaskInteraction: 0
   m_SpriteSortPoint: 0
+--- !u!1 &700705099 stripped
+GameObject:
+  m_CorrespondingSourceObject: {fileID: 6072465255660072223, guid: 9420a275716fc7543a356a92b2f54d6a, type: 3}
+  m_PrefabInstance: {fileID: 4470779726653925150}
+  m_PrefabAsset: {fileID: 0}
 --- !u!1 &759974051
 GameObject:
   m_ObjectHideFlags: 0
@@ -3483,6 +3488,7 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   RoomDone: 0
   CombatActive: 0
+  enemyPrefab: {fileID: 700705099}
 --- !u!1 &1130654534
 GameObject:
   m_ObjectHideFlags: 0

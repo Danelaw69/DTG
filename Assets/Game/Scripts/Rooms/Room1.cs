@@ -8,6 +8,9 @@ public class Room1 : MonoBehaviour
     public bool RoomDone = false;
     public bool CombatActive = false;
 
+    // Attach References
+    public GameObject enemyPrefab; // Prefab for enemies
+
 
     // Start is called before the first frame update
     void Start()
