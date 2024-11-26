@@ -10,11 +10,14 @@ TagManager:
   - Wall
   - Boss
   - Room
+  - Room 1
+  - Door closed
+  - Door open
   layers:
   - Default
   - TransparentFX
   - Ignore Raycast
-  - 
+  - Obstacle
   - Water
   - UI
   - Background
