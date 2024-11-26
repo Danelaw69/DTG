@@ -6,6 +6,7 @@ namespace MyGame.Player
 {
     public class PlayerController : MonoBehaviour
     {
+        
         [SerializeField] private float movmentSpeed = 4f;
         public float dashRange = 0.4f;
         public float dashSpeed = 8.0f;
@@ -18,7 +19,6 @@ namespace MyGame.Player
         private Rigidbody2D rb;
 
         private Vector2 movementDirection;
-
 
         // Start is called before the first frame update
         void Start()
@@ -62,5 +62,4 @@ namespace MyGame.Player
             rb.velocity = movementDirection * activeMoveSpeed;
         }
     }
-
 }

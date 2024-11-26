@@ -1,3 +1,4 @@
+using MyGame.Player;
 using UnityEngine;
 using static UnityEngine.GraphicsBuffer;
 
@@ -14,15 +15,19 @@ public class BaseGun : MonoBehaviour
 
     void Start()
     {
-        GameObject playerObject = GameObject.FindGameObjectWithTag("Player");
-        if (playerObject != null)
+        // Find the first GameObject with the specified tag
+        GameObject foundObject = GameObject.FindWithTag("Player");
+
+        // Check if the object was found
+        if (foundObject != null)
         {
-            // Store the player's transform
-            playerTransform = playerObject.transform;
+            // Assign the transform of the found object to targetTransform
+            playerTransform = foundObject.transform;
+            Debug.Log("Object found and assigned: " + foundObject.name);
         }
         else
         {
-            Debug.LogError("Player not found!");
+            Debug.Log("No object found with the specified tag.");
         }
     }
     void Update()
