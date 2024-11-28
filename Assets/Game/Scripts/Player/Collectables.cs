@@ -1,3 +1,4 @@
+using MyGame.playerHealth;
 using System.Collections;
 using System.Collections.Generic;
 using System.Security.Cryptography;
@@ -15,6 +16,10 @@ public class Collectables : MonoBehaviour
     {
         currentKeys = 0;
         currentMoney = 0;
+
+        coin = GetComponent<Text>();
+        key = GetComponent<Text>();
+        
     }
     private void OnTriggerEnter2D(Collider2D collision)
     {
@@ -28,5 +33,8 @@ public class Collectables : MonoBehaviour
             currentKeys += 1;
             //Destroy();
         }
+
     }
+        
 }
+

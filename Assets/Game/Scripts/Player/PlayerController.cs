@@ -6,10 +6,12 @@ namespace MyGame.Player
 {
     public class PlayerController : MonoBehaviour
     {
+        public Chest chest;
+
         public GameObject[] weapons;
         private int currentWeaponIndex = 0;
 
-        [SerializeField] private float movmentSpeed = 4f;
+        public float movmentSpeed = 4f;
         public float dashRange = 0.4f;
         public float dashSpeed = 8.0f;
         public float dashCooldown = 1.0f;
@@ -75,7 +77,14 @@ namespace MyGame.Player
             }
         }
 
-        
+        void OnTriggerEnter2D(Collider2D other)
+        {
+            if (other.gameObject.CompareTag("Chest"))
+            {
+                chest = other.GetComponent<Chest>();
+                chest.OpenChest();
+            }
+        }
 
         void FixedUpdate()
         {

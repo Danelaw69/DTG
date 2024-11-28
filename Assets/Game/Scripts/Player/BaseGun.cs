@@ -23,7 +23,7 @@ public class BaseGun : MonoBehaviour
         {
             // Assign the transform of the found object to targetTransform
             playerTransform = foundObject.transform;
-            Debug.Log("Object found and assigned: " + foundObject.name);
+            // Debug.Log("Object found and assigned: " + foundObject.name);
         }
         else
         {
