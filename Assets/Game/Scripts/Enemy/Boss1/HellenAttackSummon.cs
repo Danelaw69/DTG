@@ -17,6 +17,7 @@ public class HellenAttackSummon : MonoBehaviour
 
             // Instantiate an enemy at the calculated position
             Instantiate(enemyPrefab, spawnPosition, Quaternion.identity);
+            Debug.Log("Minion spawned");
         }
 
         // Destroy the attack object after summoning enemies

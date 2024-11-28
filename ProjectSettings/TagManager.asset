@@ -13,6 +13,7 @@ TagManager:
   - Room 1
   - Door closed
   - Door open
+  - Boss Health Bar
   layers:
   - Default
   - TransparentFX
