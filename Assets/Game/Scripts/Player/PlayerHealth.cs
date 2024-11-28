@@ -27,8 +27,17 @@ namespace MyGame.playerHealth
                 GameObject.Find("End Screen Buttons").transform.localScale = new Vector2(1, 1);
                 GameObject.Find("Menu Background").transform.localScale = new Vector2(1, 1);
                 playerAlive = false;
-
             }
+            if (CurrentHealth > 0)
+            {
+                healthBar.SetHealth(CurrentHealth);
+                
+            }
+            if (CurrentHealth > MaxHealth)
+            {
+                CurrentHealth = MaxHealth;
+            }
+
         }
         public void DamagePlayer(int damage)
         {
