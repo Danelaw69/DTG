@@ -54,6 +54,8 @@ public class BaseGun : MonoBehaviour
             FireProjectile();
             nextFireTime = Time.time + 1f / attackSpeed; // Set the next fire time
         }
+
+        
     }
 
     void FireProjectile()
