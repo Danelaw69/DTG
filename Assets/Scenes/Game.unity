@@ -951,6 +951,11 @@ CanvasRenderer:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 116049500}
   m_CullTransparentMesh: 1
+--- !u!1 &149168130 stripped
+GameObject:
+  m_CorrespondingSourceObject: {fileID: 620419977854212799, guid: b9101bfd4f231194cae579ecc1a4a8e1, type: 3}
+  m_PrefabInstance: {fileID: 1618329084}
+  m_PrefabAsset: {fileID: 0}
 --- !u!1 &163390823
 GameObject:
   m_ObjectHideFlags: 0
@@ -1243,6 +1248,11 @@ SpriteRenderer:
   m_WasSpriteAssigned: 1
   m_MaskInteraction: 0
   m_SpriteSortPoint: 0
+--- !u!1 &240772772 stripped
+GameObject:
+  m_CorrespondingSourceObject: {fileID: 620419977854212799, guid: 9e9d25e39ef166e4e9c9800a81b1fd17, type: 3}
+  m_PrefabInstance: {fileID: 2071259023}
+  m_PrefabAsset: {fileID: 0}
 --- !u!1 &262378150
 GameObject:
   m_ObjectHideFlags: 0
@@ -1848,6 +1858,11 @@ BoxCollider2D:
 GameObject:
   m_CorrespondingSourceObject: {fileID: 4342675888361922641, guid: bf826cc7a771ac048b0c553d224fc937, type: 3}
   m_PrefabInstance: {fileID: 1853541801981975275}
+  m_PrefabAsset: {fileID: 0}
+--- !u!1 &458105056 stripped
+GameObject:
+  m_CorrespondingSourceObject: {fileID: 620419977854212799, guid: b33559c63daaaae44ad03fa0c0bdd8ea, type: 3}
+  m_PrefabInstance: {fileID: 1602658155}
   m_PrefabAsset: {fileID: 0}
 --- !u!1 &468079726
 GameObject:
@@ -3168,6 +3183,11 @@ SpriteRenderer:
   m_WasSpriteAssigned: 1
   m_MaskInteraction: 0
   m_SpriteSortPoint: 0
+--- !u!1 &839120827 stripped
+GameObject:
+  m_CorrespondingSourceObject: {fileID: 620419977854212799, guid: a4be3a3eb7c93154b8b0f8fa2582e27c, type: 3}
+  m_PrefabInstance: {fileID: 315704122}
+  m_PrefabAsset: {fileID: 0}
 --- !u!4 &870304186 stripped
 Transform:
   m_CorrespondingSourceObject: {fileID: 6063403754266045555, guid: 33de5fe2f519df34bb7612ffffedbcad, type: 3}
@@ -5099,6 +5119,11 @@ CanvasRenderer:
 GameObject:
   m_CorrespondingSourceObject: {fileID: 5371114868640157201, guid: bf826cc7a771ac048b0c553d224fc937, type: 3}
   m_PrefabInstance: {fileID: 1853541801981975275}
+  m_PrefabAsset: {fileID: 0}
+--- !u!1 &1461384843 stripped
+GameObject:
+  m_CorrespondingSourceObject: {fileID: 620419977854212799, guid: 33de5fe2f519df34bb7612ffffedbcad, type: 3}
+  m_PrefabInstance: {fileID: 2095711061}
   m_PrefabAsset: {fileID: 0}
 --- !u!1 &1471760099
 GameObject:
@@ -10342,8 +10367,13 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: ef50ea10f9a53a549bd29a1cd0f48d8f, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  chest: {fileID: 0}
-  weapons: []
+  chest: {fileID: 704701145}
+  weapons:
+  - {fileID: 839120827}
+  - {fileID: 458105056}
+  - {fileID: 1461384843}
+  - {fileID: 240772772}
+  - {fileID: 149168130}
   movmentSpeed: 4
   dashRange: 0.4
   dashSpeed: 8
