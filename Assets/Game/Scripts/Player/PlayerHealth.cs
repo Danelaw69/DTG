@@ -2,17 +2,18 @@ using JetBrains.Annotations;
 using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
-
+using MyGame.HHealthBar;
 namespace MyGame.playerHealth
 {
     public class PlayerHealth : MonoBehaviour
     {
         public int CurrentHealth = 0;
         public int MaxHealth = 6;
-        public HealthBar healthBar;
+        private HealthBar healthBar;
         public bool playerAlive = true;
         void Start()
         {
+            healthBar = GameObject.Find("Health Bar(Player)").GetComponent<HealthBar>();
             CurrentHealth = MaxHealth;
         }
         void Update()

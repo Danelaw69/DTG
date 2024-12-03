@@ -2990,8 +2990,8 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   lootItems:
-  - {fileID: 2650291993404228127, guid: 6469ab9f6724e8f42bb6eee26888317f, type: 3}
   - {fileID: 2532316380678800395, guid: fb1a29226e1d883458f840bead626f4d, type: 3}
+  - {fileID: 2650291993404228127, guid: 6469ab9f6724e8f42bb6eee26888317f, type: 3}
   - {fileID: 7982813564483300527, guid: 40dc99135b9a5784db27c84ecc8fecf4, type: 3}
   dropChance: 100
 --- !u!1 &759974051
@@ -8576,7 +8576,7 @@ RectTransform:
   m_GameObject: {fileID: 3987185295214864748}
   m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
   m_LocalPosition: {x: 0, y: 0, z: 0}
-  m_LocalScale: {x: 1.75, y: 1.75, z: 1}
+  m_LocalScale: {x: 1.65, y: 1.65, z: 1}
   m_ConstrainProportionsScale: 0
   m_Children:
   - {fileID: 8945921229400831358}
@@ -8585,7 +8585,7 @@ RectTransform:
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
   m_AnchorMin: {x: 0.5, y: 0.5}
   m_AnchorMax: {x: 0.5, y: 0.5}
-  m_AnchoredPosition: {x: -700, y: 475}
+  m_AnchoredPosition: {x: -725, y: 475}
   m_SizeDelta: {x: 250, y: 50}
   m_Pivot: {x: 0.5, y: 0.5}
 --- !u!1 &3122172275773426552
@@ -9156,6 +9156,14 @@ PrefabInstance:
       propertyPath: m_AutoTiling
       value: 0
       objectReference: {fileID: 0}
+    - target: {fileID: 1723913743734239683, guid: 9420a275716fc7543a356a92b2f54d6a, type: 3}
+      propertyPath: room1
+      value: 
+      objectReference: {fileID: 1312948643361208436}
+    - target: {fileID: 1723913743734239683, guid: 9420a275716fc7543a356a92b2f54d6a, type: 3}
+      propertyPath: rooms
+      value: 
+      objectReference: {fileID: 3564593194181217329}
     - target: {fileID: 3923562326804632944, guid: 9420a275716fc7543a356a92b2f54d6a, type: 3}
       propertyPath: m_Size.x
       value: 0.8
@@ -9241,7 +9249,8 @@ PrefabInstance:
       value: 0
       objectReference: {fileID: 0}
     m_RemovedComponents: []
-    m_RemovedGameObjects: []
+    m_RemovedGameObjects:
+    - {fileID: 8227270428145347275, guid: 9420a275716fc7543a356a92b2f54d6a, type: 3}
     m_AddedGameObjects: []
     m_AddedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: 9420a275716fc7543a356a92b2f54d6a, type: 3}
@@ -10563,6 +10572,10 @@ PrefabInstance:
       propertyPath: m_Name
       value: Room 1
       objectReference: {fileID: 0}
+    - target: {fileID: 3852966458864775068, guid: 530f2a703cbb018458c1cd512a591583, type: 3}
+      propertyPath: roomEnemyPrefab
+      value: 
+      objectReference: {fileID: 5986522095001950772, guid: 9420a275716fc7543a356a92b2f54d6a, type: 3}
     - target: {fileID: 6278757770926542972, guid: 530f2a703cbb018458c1cd512a591583, type: 3}
       propertyPath: m_LocalPosition.x
       value: 1.1250005
@@ -10978,7 +10991,7 @@ MonoBehaviour:
   m_OnCullStateChanged:
     m_PersistentCalls:
       m_Calls: []
-  m_Sprite: {fileID: 21300000, guid: c89cd546d9e218c419bca96c1365b0c0, type: 3}
+  m_Sprite: {fileID: 21300000, guid: 97aa65bfb9dc27941b65933ba55ce6f1, type: 3}
   m_Type: 0
   m_PreserveAspect: 0
   m_FillCenter: 1
@@ -11229,7 +11242,6 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   CurrentHealth: 0
   MaxHealth: 6
-  healthBar: {fileID: 4918085141730930443}
   playerAlive: 1
 --- !u!114 &8941101557493908478
 MonoBehaviour:
@@ -11263,8 +11275,8 @@ RectTransform:
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
   m_AnchorMin: {x: 0, y: 0}
   m_AnchorMax: {x: 0, y: 0}
-  m_AnchoredPosition: {x: -0.3837967, y: 0.9213009}
-  m_SizeDelta: {x: -15.8949, y: -16.9699}
+  m_AnchoredPosition: {x: -0.0000076293945, y: 0}
+  m_SizeDelta: {x: 0, y: 0}
   m_Pivot: {x: 0.5, y: 0.5}
 --- !u!224 &9024749848843085790
 RectTransform:

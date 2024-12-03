@@ -3,19 +3,28 @@ using System.Collections.Generic;
 using UnityEngine;
 using UnityEngine.UI;
 using MyGame.playerHealth;
-public class HealthBar : MonoBehaviour
+
+namespace MyGame.HHealthBar
 {
-    public Slider healthBar;
-    public PlayerHealth playerHealth;
-    private void Start()
+    public class HealthBar : MonoBehaviour
     {
-        playerHealth = GameObject.FindGameObjectWithTag("Player").GetComponent<PlayerHealth>();
-        healthBar = GetComponent<Slider>();
-        healthBar.maxValue = playerHealth.MaxHealth;
-        healthBar.value = playerHealth.MaxHealth;
-    }
-    public void SetHealth(int hp)
-    {
-        healthBar.value = hp;
+        public Slider healthBar;
+        public PlayerHealth playerHealth;
+        private void Start()
+        {
+            UpdateHealthBar();
+        }
+        public void SetHealth(int hp)
+        {
+            healthBar.value = hp;
+        }
+        // Updates the maximum value for the healthbar
+        public void UpdateHealthBar()
+        {
+            playerHealth = GameObject.FindGameObjectWithTag("Player").GetComponent<PlayerHealth>();
+            healthBar = GetComponent<Slider>();
+            healthBar.maxValue = playerHealth.MaxHealth;
+            healthBar.value = playerHealth.MaxHealth;
+        }
     }
 }
