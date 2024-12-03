@@ -28,7 +28,7 @@ namespace MyGame.Enemy
             dooropen = GameObject.FindWithTag("Door open");
 
             GameObject playerObject = GameObject.FindGameObjectWithTag("Player");
-
+            rooms = GameObject.FindGameObjectWithTag("Room 1").GetComponent<Rooms>();
             if (playerObject != null)
             {
                 // Store the player's transform
