@@ -10,15 +10,15 @@ TagManager:
   - Wall
   - Boss
   - Room
-  - Room 1
-  - Door closed
-  - Door open
-  - Boss Health Bar
+  - Coin
+  - Key
+  - Item
+  - Chest
   layers:
   - Default
   - TransparentFX
   - Ignore Raycast
-  - Obstacle
+  - 
   - Water
   - UI
   - Background

@@ -50,7 +50,7 @@ namespace MyGame.bulletHellen
             logic.shotCount = 2; // Adjust the number of shots
             logic.shotSpeed = 5f; // Adjust the shot speed
             logic.shotSpread = 45f; // Adjust the spread angle
-
+            
             return attack;
         }
 
