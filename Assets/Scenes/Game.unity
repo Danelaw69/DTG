@@ -1389,6 +1389,22 @@ PrefabInstance:
       propertyPath: m_IsActive
       value: 0
       objectReference: {fileID: 0}
+    - target: {fileID: 4601714927750770110, guid: a4be3a3eb7c93154b8b0f8fa2582e27c, type: 3}
+      propertyPath: m_SortingOrder
+      value: 3
+      objectReference: {fileID: 0}
+    - target: {fileID: 6063403754266045555, guid: a4be3a3eb7c93154b8b0f8fa2582e27c, type: 3}
+      propertyPath: m_LocalScale.x
+      value: 0.5
+      objectReference: {fileID: 0}
+    - target: {fileID: 6063403754266045555, guid: a4be3a3eb7c93154b8b0f8fa2582e27c, type: 3}
+      propertyPath: m_LocalScale.y
+      value: 0.5
+      objectReference: {fileID: 0}
+    - target: {fileID: 6063403754266045555, guid: a4be3a3eb7c93154b8b0f8fa2582e27c, type: 3}
+      propertyPath: m_LocalScale.z
+      value: 0.5
+      objectReference: {fileID: 0}
     - target: {fileID: 6063403754266045555, guid: a4be3a3eb7c93154b8b0f8fa2582e27c, type: 3}
       propertyPath: m_LocalPosition.x
       value: 0
@@ -1433,6 +1449,10 @@ PrefabInstance:
       propertyPath: distance
       value: 0.5
       objectReference: {fileID: 0}
+    - target: {fileID: 8224466097843939796, guid: a4be3a3eb7c93154b8b0f8fa2582e27c, type: 3}
+      propertyPath: playerTransform
+      value: 
+      objectReference: {fileID: 7643289607727063792}
     m_RemovedComponents: []
     m_RemovedGameObjects: []
     m_AddedGameObjects: []
@@ -2190,11 +2210,6 @@ SpriteRenderer:
   m_WasSpriteAssigned: 1
   m_MaskInteraction: 0
   m_SpriteSortPoint: 0
---- !u!1 &550291769 stripped
-GameObject:
-  m_CorrespondingSourceObject: {fileID: 620419977854212799, guid: 9e9d25e39ef166e4e9c9800a81b1fd17, type: 3}
-  m_PrefabInstance: {fileID: 2071259023}
-  m_PrefabAsset: {fileID: 0}
 --- !u!4 &550291772 stripped
 Transform:
   m_CorrespondingSourceObject: {fileID: 6063403754266045555, guid: 9e9d25e39ef166e4e9c9800a81b1fd17, type: 3}
@@ -2868,8 +2883,8 @@ GameObject:
   m_Component:
   - component: {fileID: 704701143}
   - component: {fileID: 704701142}
-  - component: {fileID: 704701141}
   - component: {fileID: 704701144}
+  - component: {fileID: 704701145}
   m_Layer: 0
   m_Name: Chest
   m_TagString: Chest
@@ -2877,23 +2892,6 @@ GameObject:
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
   m_IsActive: 1
---- !u!114 &704701141
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 704701140}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: 87b1aed0ba9305a48895e66719a45bac, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
-  lootItems:
-  - {fileID: 2650291993404228127, guid: 6469ab9f6724e8f42bb6eee26888317f, type: 3}
-  - {fileID: 2532316380678800395, guid: fb1a29226e1d883458f840bead626f4d, type: 3}
-  - {fileID: 7982813564483300527, guid: 40dc99135b9a5784db27c84ecc8fecf4, type: 3}
-  dropChance: 100
 --- !u!212 &704701142
 SpriteRenderer:
   m_ObjectHideFlags: 0
@@ -3006,6 +3004,23 @@ BoxCollider2D:
   serializedVersion: 2
   m_Size: {x: 1, y: 1}
   m_EdgeRadius: 0
+--- !u!114 &704701145
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 704701140}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 87b1aed0ba9305a48895e66719a45bac, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  lootItems:
+  - {fileID: 2650291993404228127, guid: 6469ab9f6724e8f42bb6eee26888317f, type: 3}
+  - {fileID: 2532316380678800395, guid: fb1a29226e1d883458f840bead626f4d, type: 3}
+  - {fileID: 7982813564483300527, guid: 40dc99135b9a5784db27c84ecc8fecf4, type: 3}
+  dropChance: 100
 --- !u!1 &759974051
 GameObject:
   m_ObjectHideFlags: 0
@@ -3283,11 +3298,6 @@ SpriteRenderer:
   m_WasSpriteAssigned: 1
   m_MaskInteraction: 0
   m_SpriteSortPoint: 0
---- !u!1 &870304183 stripped
-GameObject:
-  m_CorrespondingSourceObject: {fileID: 620419977854212799, guid: 33de5fe2f519df34bb7612ffffedbcad, type: 3}
-  m_PrefabInstance: {fileID: 2095711061}
-  m_PrefabAsset: {fileID: 0}
 --- !u!4 &870304186 stripped
 Transform:
   m_CorrespondingSourceObject: {fileID: 6063403754266045555, guid: 33de5fe2f519df34bb7612ffffedbcad, type: 3}
@@ -5350,11 +5360,6 @@ SpriteRenderer:
   m_WasSpriteAssigned: 1
   m_MaskInteraction: 0
   m_SpriteSortPoint: 0
---- !u!1 &1555959997 stripped
-GameObject:
-  m_CorrespondingSourceObject: {fileID: 620419977854212799, guid: a4be3a3eb7c93154b8b0f8fa2582e27c, type: 3}
-  m_PrefabInstance: {fileID: 315704122}
-  m_PrefabAsset: {fileID: 0}
 --- !u!4 &1555960000 stripped
 Transform:
   m_CorrespondingSourceObject: {fileID: 6063403754266045555, guid: a4be3a3eb7c93154b8b0f8fa2582e27c, type: 3}
@@ -5461,11 +5466,6 @@ SpriteRenderer:
   m_WasSpriteAssigned: 1
   m_MaskInteraction: 0
   m_SpriteSortPoint: 0
---- !u!1 &1588618098 stripped
-GameObject:
-  m_CorrespondingSourceObject: {fileID: 620419977854212799, guid: b33559c63daaaae44ad03fa0c0bdd8ea, type: 3}
-  m_PrefabInstance: {fileID: 1602658155}
-  m_PrefabAsset: {fileID: 0}
 --- !u!4 &1588618101 stripped
 Transform:
   m_CorrespondingSourceObject: {fileID: 6063403754266045555, guid: b33559c63daaaae44ad03fa0c0bdd8ea, type: 3}
@@ -5498,6 +5498,30 @@ PrefabInstance:
     - target: {fileID: 734704344900069290, guid: b33559c63daaaae44ad03fa0c0bdd8ea, type: 3}
       propertyPath: bulletSpeed
       value: 1.5
+      objectReference: {fileID: 0}
+    - target: {fileID: 734704344900069290, guid: b33559c63daaaae44ad03fa0c0bdd8ea, type: 3}
+      propertyPath: playerTransform
+      value: 
+      objectReference: {fileID: 7643289607727063792}
+    - target: {fileID: 4601714927750770110, guid: b33559c63daaaae44ad03fa0c0bdd8ea, type: 3}
+      propertyPath: m_Sprite
+      value: 
+      objectReference: {fileID: 21300000, guid: 914db2b8cdbfdad428d9a7c38c3d8c61, type: 3}
+    - target: {fileID: 4601714927750770110, guid: b33559c63daaaae44ad03fa0c0bdd8ea, type: 3}
+      propertyPath: m_SortingOrder
+      value: 3
+      objectReference: {fileID: 0}
+    - target: {fileID: 6063403754266045555, guid: b33559c63daaaae44ad03fa0c0bdd8ea, type: 3}
+      propertyPath: m_LocalScale.x
+      value: 0.5
+      objectReference: {fileID: 0}
+    - target: {fileID: 6063403754266045555, guid: b33559c63daaaae44ad03fa0c0bdd8ea, type: 3}
+      propertyPath: m_LocalScale.y
+      value: 0.5
+      objectReference: {fileID: 0}
+    - target: {fileID: 6063403754266045555, guid: b33559c63daaaae44ad03fa0c0bdd8ea, type: 3}
+      propertyPath: m_LocalScale.z
+      value: 0.5
       objectReference: {fileID: 0}
     - target: {fileID: 6063403754266045555, guid: b33559c63daaaae44ad03fa0c0bdd8ea, type: 3}
       propertyPath: m_LocalPosition.x
@@ -5694,6 +5718,10 @@ PrefabInstance:
       propertyPath: m_Sprite
       value: 
       objectReference: {fileID: 21300000, guid: 050443ca6b3569d4e9ba4ef866c58599, type: 3}
+    - target: {fileID: 4601714927750770110, guid: b9101bfd4f231194cae579ecc1a4a8e1, type: 3}
+      propertyPath: m_SortingOrder
+      value: 3
+      objectReference: {fileID: 0}
     - target: {fileID: 6063403754266045555, guid: b9101bfd4f231194cae579ecc1a4a8e1, type: 3}
       propertyPath: m_LocalScale.x
       value: 0.5
@@ -5720,19 +5748,19 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 6063403754266045555, guid: b9101bfd4f231194cae579ecc1a4a8e1, type: 3}
       propertyPath: m_LocalRotation.w
-      value: 0.7071068
+      value: 1
       objectReference: {fileID: 0}
     - target: {fileID: 6063403754266045555, guid: b9101bfd4f231194cae579ecc1a4a8e1, type: 3}
       propertyPath: m_LocalRotation.x
-      value: -0
+      value: 0
       objectReference: {fileID: 0}
     - target: {fileID: 6063403754266045555, guid: b9101bfd4f231194cae579ecc1a4a8e1, type: 3}
       propertyPath: m_LocalRotation.y
-      value: -0
+      value: 0
       objectReference: {fileID: 0}
     - target: {fileID: 6063403754266045555, guid: b9101bfd4f231194cae579ecc1a4a8e1, type: 3}
       propertyPath: m_LocalRotation.z
-      value: 0.70710677
+      value: 0
       objectReference: {fileID: 0}
     - target: {fileID: 6063403754266045555, guid: b9101bfd4f231194cae579ecc1a4a8e1, type: 3}
       propertyPath: m_LocalEulerAnglesHint.x
@@ -5744,11 +5772,11 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 6063403754266045555, guid: b9101bfd4f231194cae579ecc1a4a8e1, type: 3}
       propertyPath: m_LocalEulerAnglesHint.z
-      value: 90
+      value: 0
       objectReference: {fileID: 0}
     - target: {fileID: 8224466097843939796, guid: b9101bfd4f231194cae579ecc1a4a8e1, type: 3}
       propertyPath: distance
-      value: 0.5
+      value: 0.7
       objectReference: {fileID: 0}
     - target: {fileID: 8224466097843939796, guid: b9101bfd4f231194cae579ecc1a4a8e1, type: 3}
       propertyPath: attackSpeed
@@ -5758,6 +5786,10 @@ PrefabInstance:
       propertyPath: bulletSpeed
       value: 10
       objectReference: {fileID: 0}
+    - target: {fileID: 8224466097843939796, guid: b9101bfd4f231194cae579ecc1a4a8e1, type: 3}
+      propertyPath: playerTransform
+      value: 
+      objectReference: {fileID: 7643289607727063792}
     m_RemovedComponents: []
     m_RemovedGameObjects: []
     m_AddedGameObjects: []
@@ -7183,11 +7215,6 @@ SpriteRenderer:
   m_WasSpriteAssigned: 1
   m_MaskInteraction: 0
   m_SpriteSortPoint: 0
---- !u!1 &2062490733 stripped
-GameObject:
-  m_CorrespondingSourceObject: {fileID: 620419977854212799, guid: b9101bfd4f231194cae579ecc1a4a8e1, type: 3}
-  m_PrefabInstance: {fileID: 1618329084}
-  m_PrefabAsset: {fileID: 0}
 --- !u!4 &2062490736 stripped
 Transform:
   m_CorrespondingSourceObject: {fileID: 6063403754266045555, guid: b9101bfd4f231194cae579ecc1a4a8e1, type: 3}
@@ -7204,6 +7231,22 @@ PrefabInstance:
     - target: {fileID: 620419977854212799, guid: 9e9d25e39ef166e4e9c9800a81b1fd17, type: 3}
       propertyPath: m_Name
       value: Shotgun
+      objectReference: {fileID: 0}
+    - target: {fileID: 620419977854212799, guid: 9e9d25e39ef166e4e9c9800a81b1fd17, type: 3}
+      propertyPath: m_IsActive
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 4601714927750770110, guid: 9e9d25e39ef166e4e9c9800a81b1fd17, type: 3}
+      propertyPath: m_SortingOrder
+      value: 3
+      objectReference: {fileID: 0}
+    - target: {fileID: 6063403754266045555, guid: 9e9d25e39ef166e4e9c9800a81b1fd17, type: 3}
+      propertyPath: m_LocalScale.x
+      value: 0.5
+      objectReference: {fileID: 0}
+    - target: {fileID: 6063403754266045555, guid: 9e9d25e39ef166e4e9c9800a81b1fd17, type: 3}
+      propertyPath: m_LocalScale.y
+      value: 0.5
       objectReference: {fileID: 0}
     - target: {fileID: 6063403754266045555, guid: 9e9d25e39ef166e4e9c9800a81b1fd17, type: 3}
       propertyPath: m_LocalPosition.x
@@ -7249,6 +7292,10 @@ PrefabInstance:
       propertyPath: distance
       value: 0.5
       objectReference: {fileID: 0}
+    - target: {fileID: 8224466097843939796, guid: 9e9d25e39ef166e4e9c9800a81b1fd17, type: 3}
+      propertyPath: playerTransform
+      value: 
+      objectReference: {fileID: 7643289607727063792}
     m_RemovedComponents: []
     m_RemovedGameObjects: []
     m_AddedGameObjects: []
@@ -7265,6 +7312,14 @@ PrefabInstance:
     - target: {fileID: 620419977854212799, guid: 33de5fe2f519df34bb7612ffffedbcad, type: 3}
       propertyPath: m_Name
       value: Knife
+      objectReference: {fileID: 0}
+    - target: {fileID: 620419977854212799, guid: 33de5fe2f519df34bb7612ffffedbcad, type: 3}
+      propertyPath: m_IsActive
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 4601714927750770110, guid: 33de5fe2f519df34bb7612ffffedbcad, type: 3}
+      propertyPath: m_SortingOrder
+      value: 3
       objectReference: {fileID: 0}
     - target: {fileID: 6063403754266045555, guid: 33de5fe2f519df34bb7612ffffedbcad, type: 3}
       propertyPath: m_LocalPosition.x
@@ -7318,6 +7373,10 @@ PrefabInstance:
       propertyPath: bulletSpeed
       value: 3
       objectReference: {fileID: 0}
+    - target: {fileID: 8224466097843939796, guid: 33de5fe2f519df34bb7612ffffedbcad, type: 3}
+      propertyPath: playerTransform
+      value: 
+      objectReference: {fileID: 7643289607727063792}
     m_RemovedComponents: []
     m_RemovedGameObjects: []
     m_AddedGameObjects: []
@@ -10430,12 +10489,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   chest: {fileID: 0}
-  weapons:
-  - {fileID: 1555959997}
-  - {fileID: 1588618098}
-  - {fileID: 870304183}
-  - {fileID: 550291769}
-  - {fileID: 2062490733}
+  weapons: []
   movmentSpeed: 4
   dashRange: 0.4
   dashSpeed: 8
