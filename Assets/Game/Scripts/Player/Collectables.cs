@@ -26,12 +26,12 @@ public class Collectables : MonoBehaviour
         if (collision.CompareTag("Coin"))
         {
             currentMoney += 1;
-            //Destroy();
+            Destroy(collision);
         }
         if (collision.CompareTag("Key"))
         {
             currentKeys += 1;
-            //Destroy();
+            Destroy(collision);
         }
 
     }
