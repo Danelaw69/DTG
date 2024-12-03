@@ -2,6 +2,7 @@ using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
 using UnityEngine.AI;
+using MyGame.rooms;
 
 namespace MyGame.Enemy
 {
@@ -14,8 +15,18 @@ namespace MyGame.Enemy
 
         private NavMeshAgent agent; // Reference to the NavMeshAgent
 
+        public Rooms rooms;
+        public Rooms room1;
+
+        public GameObject doorclosed;
+        public GameObject dooropen;
+
+
         private void Start()
         {
+            doorclosed = GameObject.FindWithTag("Door closed");
+            dooropen = GameObject.FindWithTag("Door open");
+
             GameObject playerObject = GameObject.FindGameObjectWithTag("Player");
 
             if (playerObject != null)
@@ -68,6 +79,13 @@ namespace MyGame.Enemy
             // - Trigger events (optional)
 
             Destroy(gameObject); // Destroy the enemy object
+            rooms.RoomEnemiesAlive -= 1;
+            room1.RoomEnemiesAlive -= 1;
+            if (rooms.RoomEnemiesAlive <= 0)
+            {
+                doorclosed.transform.localScale = new Vector2(0, 0);
+                dooropen.transform.localScale = new Vector2(1, 1);
+            }
         }
     }
 }

@@ -1,9 +1,11 @@
 using UnityEngine;
+using MyGame.rooms;
 
 namespace MyGame.bulletHellen
 {
     public class BulletHellen : MonoBehaviour
     {
+        public Rooms rooms;
         // Boss Stats
         public float BossCurrentHealth = 0;       
         public float BossMaxHealth = 50;
@@ -19,7 +21,7 @@ namespace MyGame.bulletHellen
 
         // Internal Variables
         private float cooldownTimer;
-        public float attackRange = 5f; // Add a public variable for attack range
+        public float attackRange = 20f; // Add a public variable for attack range
 
         // Bools
         public bool BossAlive = true;
@@ -115,9 +117,10 @@ namespace MyGame.bulletHellen
             bossHealthBar.SetBossHealth(BossCurrentHealth);
             if (BossCurrentHealth <= 0)
             {
-                Time.timeScale = 0;
-                GameObject.Find("Win Screen").transform.localScale = new Vector2(1, 1);
-                GameObject.Find("Menu Background").transform.localScale = new Vector2(1, 1);
+                //    Time.timeScale = 0;
+                //    GameObject.Find("Win Screen").transform.localScale = new Vector2(1, 1);
+                //    GameObject.Find("Menu Background").transform.localScale = new Vector2(1, 1);
+                rooms.RoomEnemiesAlive -= 1;
                 BossAlive = false;
                 Destroy(gameObject);
             }
