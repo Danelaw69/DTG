@@ -58,7 +58,10 @@ namespace MyGame.Player
                     dashCoolCounter = dashCooldown;
                 }
             }
-
+            if (dashCoolCounter > 0)
+            {
+                dashCoolCounter -= Time.deltaTime;
+            }
 
             // Check for key presses (1-5)
             if (Input.GetKeyDown(KeyCode.Alpha1)) { currentWeaponIndex = 0; }
@@ -74,6 +77,7 @@ namespace MyGame.Player
             for (int i = 0; i < weapons.Length; i++)
             {
                 weapons[i].SetActive(i == currentWeaponIndex);
+                Debug.Log("Hello");
             }
         }
 

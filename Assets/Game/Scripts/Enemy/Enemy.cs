@@ -15,20 +15,20 @@ namespace MyGame.Enemy
 
         private NavMeshAgent agent; // Reference to the NavMeshAgent
 
-        public Rooms rooms;
-        public Rooms room1;
+        //public Rooms rooms;
+        //public Rooms room1;
 
-        public GameObject doorclosed;
-        public GameObject dooropen;
+        //public GameObject doorclosed;
+        //public GameObject dooropen;
 
 
         private void Start()
         {
-            doorclosed = GameObject.FindWithTag("Door closed");
-            dooropen = GameObject.FindWithTag("Door open");
+            //doorclosed = GameObject.FindWithTag("Door closed");
+            //dooropen = GameObject.FindWithTag("Door open");
 
             GameObject playerObject = GameObject.FindGameObjectWithTag("Player");
-            rooms = GameObject.FindGameObjectWithTag("Room 1").GetComponent<Rooms>();
+            //rooms = GameObject.FindGameObjectWithTag("Room 1").GetComponent<Rooms>();
             if (playerObject != null)
             {
                 // Store the player's transform
@@ -79,13 +79,13 @@ namespace MyGame.Enemy
             // - Trigger events (optional)
 
             Destroy(gameObject); // Destroy the enemy object
-            rooms.RoomEnemiesAlive -= 1;
-            room1.RoomEnemiesAlive -= 1;
-            if (rooms.RoomEnemiesAlive <= 0)
-            {
-                doorclosed.transform.localScale = new Vector2(0, 0);
-                dooropen.transform.localScale = new Vector2(1, 1);
-            }
+            //rooms.RoomEnemiesAlive -= 1;
+            //room1.RoomEnemiesAlive -= 1;
+            //if (rooms.RoomEnemiesAlive <= 0)
+            //{
+            //    doorclosed.transform.localScale = new Vector2(0, 0);
+            //    dooropen.transform.localScale = new Vector2(1, 1);
+            //}
         }
     }
 }
