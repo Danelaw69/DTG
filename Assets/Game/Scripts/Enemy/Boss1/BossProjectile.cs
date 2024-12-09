@@ -1,6 +1,8 @@
 using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
+using MyGame.playerHealth;
+
 
 public class BossProjectile : MonoBehaviour
 {
@@ -21,6 +23,27 @@ public class BossProjectile : MonoBehaviour
         // Destroy the bullet if it exceeds its range
         if (travelDistance >= range)
         {
+            Destroy(gameObject);
+        }
+    }
+    private void OnTriggerEnter2D(Collider2D collision)
+    {
+        // Check if the bullet hits the player or a wall
+        if (collision.CompareTag("Player") || collision.CompareTag("Wall"))
+        {
+            // Apply damage to the player (if it's the player)
+            if (collision.CompareTag("Player"))
+            {
+                // Assuming your Player script is in the same namespace as Bullet
+                PlayerHealth playerHealth = collision.GetComponent<PlayerHealth>();
+                if (playerHealth != null)
+                {
+                    playerHealth.DamagePlayer(1);
+                }
+
+            }
+
+            // Destroy the bullet
             Destroy(gameObject);
         }
     }

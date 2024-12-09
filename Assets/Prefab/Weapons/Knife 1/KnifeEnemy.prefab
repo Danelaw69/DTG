@@ -10,7 +10,7 @@ GameObject:
   m_Component:
   - component: {fileID: 6063403754266045555}
   - component: {fileID: 4601714927750770110}
-  - component: {fileID: 5078492722996833923}
+  - component: {fileID: -4951026095857322017}
   m_Layer: 0
   m_Name: KnifeEnemy
   m_TagString: Untagged
@@ -85,7 +85,7 @@ SpriteRenderer:
   m_WasSpriteAssigned: 1
   m_MaskInteraction: 0
   m_SpriteSortPoint: 0
---- !u!114 &5078492722996833923
+--- !u!114 &-4951026095857322017
 MonoBehaviour:
   m_ObjectHideFlags: 0
   m_CorrespondingSourceObject: {fileID: 0}
@@ -94,9 +94,10 @@ MonoBehaviour:
   m_GameObject: {fileID: 620419977854212799}
   m_Enabled: 1
   m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: 582504f5552dc0c47b0fe98bb20e790d, type: 3}
+  m_Script: {fileID: 11500000, guid: e0c02701fda12bd4a9ce2a23894216a3, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  speed: 10
-  damage: 5
-  range: 5
+  EbulletSpeed: 1
+  EattackSpeed: 10
+  playerTransform: {fileID: 0}
+  projectilePrefab: {fileID: 6623504421008870561, guid: ce94e629ecd6a274087d223c3a8ea0bf, type: 3}

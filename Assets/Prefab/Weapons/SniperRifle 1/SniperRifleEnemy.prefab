@@ -97,7 +97,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: e0c02701fda12bd4a9ce2a23894216a3, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  EbulletSpeed: 1
-  EattackSpeed: 1
+  EbulletSpeed: 5
+  EattackSpeed: 0.33
   playerTransform: {fileID: 0}
   projectilePrefab: {fileID: 6623504421008870561, guid: 3bc58bab40730f44f87b33719e097f2a, type: 3}

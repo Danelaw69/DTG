@@ -26,7 +26,7 @@ public class EnemyGunBase : MonoBehaviour
     void Update()
     {
         // Only fire if the player is within a certain range
-        if (Vector2.Distance(transform.position, playerTransform.position) < 5f)
+        if (Vector2.Distance(transform.position, playerTransform.position) < 100f)
         {
             // Handle projectile firing
             if (Time.time >= nextFireTime)

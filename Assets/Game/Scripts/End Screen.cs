@@ -1,5 +1,6 @@
 using System.Collections;
 using System.Collections.Generic;
+using UnityEditor.SearchService;
 using UnityEngine;
 using UnityEngine.SceneManagement;
 public class EndScreen : MonoBehaviour
@@ -14,11 +15,15 @@ public class EndScreen : MonoBehaviour
     // Update is called once per frame
     void Update()
     {
-        
+
     }
     public void doRestartGame()
     {
         SceneManager.LoadScene(1);
+    }
+    public void DoRestartGame1()
+    {
+        SceneManager.LoadScene(2);
     }
     public void doMainMenu()
     {

@@ -38,7 +38,6 @@ public class EnemyBullet : MonoBehaviour
                 {
                     playerHealth.DamagePlayer(1);
                 }
-
             }
 
             // Destroy the bullet

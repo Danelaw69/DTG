@@ -19,6 +19,10 @@ public class WinScreen : MonoBehaviour
     {
         SceneManager.LoadScene(1);
     }
+    public void doRestartGame1()
+    {
+        SceneManager.LoadScene(2);
+    }
     // Loads Main Menu Scene and sets TimeScale to 1
     public void doMainMenuWin()
     {
