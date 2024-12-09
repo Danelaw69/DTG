@@ -24,15 +24,15 @@ namespace MyGame.Player
 
         private Vector2 movementDirection;
 
-        
+
 
         // Start is called before the first frame update
         void Start()
         {
             activeMoveSpeed = movmentSpeed;
             rb = GetComponent<Rigidbody2D>();
-            
-            
+
+
         }
 
         // Update is called once per frame
@@ -77,7 +77,6 @@ namespace MyGame.Player
             for (int i = 0; i < weapons.Length; i++)
             {
                 weapons[i].SetActive(i == currentWeaponIndex);
-                Debug.Log("Hello");
             }
         }
 
@@ -95,4 +94,5 @@ namespace MyGame.Player
             rb.velocity = movementDirection * activeMoveSpeed;
         }
     }
+
 }

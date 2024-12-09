@@ -2,7 +2,7 @@ using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
 
-public class Room1 : MonoBehaviour
+public class Room3 : MonoBehaviour
 {
     // Intergars
     public int RoomEnemyCount;
@@ -19,7 +19,6 @@ public class Room1 : MonoBehaviour
     {
         doorclosed = GameObject.FindWithTag("Door closed");
         dooropen = GameObject.FindWithTag("Door open");
-        doorclosed.transform.localScale = new Vector2(0, 0);
     }
 
     // Update is called once per frame
