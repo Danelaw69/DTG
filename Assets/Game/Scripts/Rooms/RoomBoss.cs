@@ -2,7 +2,7 @@ using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
 
-public class Room3 : MonoBehaviour
+public class RoomBoss : MonoBehaviour
 {
     // Intergars
     public int RoomEnemyCount;

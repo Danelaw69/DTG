@@ -13,7 +13,7 @@ public class HellenAttackSummon : MonoBehaviour
         for (int i = 0; i < enemyCount; i++)
         {
             // Calculate a random position around the boss
-            Vector2 spawnPosition = Random.insideUnitCircle * 100f + (Vector2)transform.position;
+            Vector2 spawnPosition = Random.insideUnitCircle * 5f + (Vector2)transform.position;
 
             // Instantiate an enemy at the calculated position
             Instantiate(enemyPrefab, spawnPosition, Quaternion.identity);

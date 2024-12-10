@@ -24,7 +24,7 @@ public class ExitButton : MonoBehaviour
     }
     public void doStartGame()
     {
-        SceneManager.LoadScene(1);
+        SceneManager.LoadScene(2);
     }
     public void doExitGame()
     {

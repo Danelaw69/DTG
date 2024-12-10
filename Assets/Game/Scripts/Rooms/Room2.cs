@@ -8,7 +8,7 @@ public class Room2 : MonoBehaviour
     public int RoomEnemyCount;
     // Bools
     public bool CombatActive = false;
-    private bool RoomDone = false;
+    public bool RoomDone = false;
     // Attach References
     public GameObject roomEnemyPrefab; // Prefab for enemies
     public GameObject doorclosed;
