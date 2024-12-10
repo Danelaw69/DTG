@@ -13,6 +13,7 @@ public class BossHealthBar : MonoBehaviour
         healthBar = GetComponent<Slider>();
         healthBar.maxValue = BulletHellen.BossMaxHealth;
         healthBar.value = BulletHellen.BossMaxHealth;
+        GameObject.Find("Boss Health Bar").transform.localScale = new Vector2(0, 0);
     }
     public void SetBossHealth(float hp)
     {

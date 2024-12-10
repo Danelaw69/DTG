@@ -117,10 +117,9 @@ namespace MyGame.bulletHellen
             bossHealthBar.SetBossHealth(BossCurrentHealth);
             if (BossCurrentHealth <= 0)
             {
-                //    Time.timeScale = 0;
-                //    GameObject.Find("Win Screen").transform.localScale = new Vector2(1, 1);
-                //    GameObject.Find("Menu Background").transform.localScale = new Vector2(1, 1);
-                rooms.RoomEnemiesAlive -= 1;
+                Time.timeScale = 0;
+                GameObject.Find("Win Screen").transform.localScale = new Vector2(1, 1);
+                GameObject.Find("Menu Background").transform.localScale = new Vector2(1, 1);
                 BossAlive = false;
                 Destroy(gameObject);
             }
