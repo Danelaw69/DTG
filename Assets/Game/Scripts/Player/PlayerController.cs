@@ -7,7 +7,7 @@ namespace MyGame.Player
     public class PlayerController : MonoBehaviour
     {
         public Chest chest;
-
+        public Animator animator;
         public GameObject[] weapons;
         private int currentWeaponIndex = 0;
 
@@ -20,6 +20,8 @@ namespace MyGame.Player
         private float dashCounter;
         private float dashCoolCounter;
 
+        public bool isDashing = false;
+
         private Rigidbody2D rb;
 
         private Vector2 movementDirection;
@@ -31,7 +33,7 @@ namespace MyGame.Player
         {
             activeMoveSpeed = movmentSpeed;
             rb = GetComponent<Rigidbody2D>();
-
+            animator = GetComponent<Animator>();
 
         }
 
@@ -43,8 +45,7 @@ namespace MyGame.Player
             {
                 if (dashCoolCounter <= 0 && dashCounter <= 0)
                 {
-                    activeMoveSpeed = dashSpeed;
-                    dashCounter = dashRange;
+                    StartCoroutine(waiter());
                 }
             }
 
@@ -61,6 +62,16 @@ namespace MyGame.Player
             if (dashCoolCounter > 0)
             {
                 dashCoolCounter -= Time.deltaTime;
+            }
+            IEnumerator waiter()
+            {
+                isDashing = true;
+                animator.SetTrigger("PressButtonSpace");
+                activeMoveSpeed = dashSpeed;
+                dashCounter = dashRange;
+                yield return new WaitForSeconds(0);
+                animator.SetTrigger("StopAnimation");
+                isDashing = false;
             }
 
             // Check for key presses (1-5)
