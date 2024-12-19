@@ -9,9 +9,7 @@ public class Escapemenu : MonoBehaviour
     // Start is called before the first frame update
     void Start()
     {
-        GameObject.Find("Escape Menu Buttons").transform.localScale = new Vector2(0, 0);
-        GameObject.Find("Options Menu Buttons").transform.localScale = new Vector2(0, 0);
-        GameObject.Find("Menu Background").transform.localScale = new Vector2(0, 0);
+        HideAllButtons();
     }
 
     // Update is called once per frame
@@ -21,18 +19,11 @@ public class Escapemenu : MonoBehaviour
         {
             if (EscapeMenuActive == false)
             {
-                GameObject.Find("Escape Menu Buttons").transform.localScale = new Vector2(1, 1);
-                GameObject.Find("Menu Background").transform.localScale = new Vector2(1, 1);
-                EscapeMenuActive = true;
-                Time.timeScale = 0;
+                ToggleOnEscapeMenu();
             }
             else
             {
-                GameObject.Find("Escape Menu Buttons").transform.localScale = new Vector2(0, 0);
-                GameObject.Find("Menu Background").transform.localScale = new Vector2(0, 0);
-                GameObject.Find("Options Menu Buttons").transform.localScale = new Vector2(0, 0);
-                EscapeMenuActive = false;
-                Time.timeScale = 1;
+                ToggleOffEscapeMenu();
             }
 
 
@@ -60,9 +51,35 @@ public class Escapemenu : MonoBehaviour
         Application.Quit();
         Debug.Log("Game Closed");
     }
-    public void doOptionsBack()
+    public void doViewControlsBack()
     {
-        GameObject.Find("Escape Menu Buttons").transform.localScale = new Vector2 (1, 1);
-        GameObject.Find("Options Menu Buttons").transform.localScale = new Vector2 (0, 0);
+        GameObject.Find("View Controls Menu").transform.localScale = new Vector2(0, 0);
+        GameObject.Find("Escape Menu Buttons").transform.localScale = new Vector2(1, 1);
+    }
+    public void doViewControls()
+    {
+        GameObject.Find("Escape Menu Buttons").transform.localScale = new Vector2(0, 0);
+        GameObject.Find("View Controls Menu").transform.localScale = new Vector2(1, 1);
+    }
+    public void HideAllButtons()
+    {
+        GameObject.Find("Escape Menu Buttons").transform.localScale = new Vector2(0, 0);
+        GameObject.Find("Menu Background").transform.localScale = new Vector2(0, 0);
+        GameObject.Find("View Controls Menu").transform.localScale = new Vector2(0, 0);
+    }
+    public void ToggleOnEscapeMenu()
+    {
+        GameObject.Find("Escape Menu Buttons").transform.localScale = new Vector2(1, 1);
+        GameObject.Find("Menu Background").transform.localScale = new Vector2(1, 1);
+        EscapeMenuActive = true;
+        Time.timeScale = 0;
+    }
+    public void ToggleOffEscapeMenu()
+    {
+        GameObject.Find("Escape Menu Buttons").transform.localScale = new Vector2(0, 0);
+        GameObject.Find("Menu Background").transform.localScale = new Vector2(0, 0);
+        GameObject.Find("View Controls Menu").transform.localScale = new Vector2(0, 0);
+        EscapeMenuActive = false;
+        Time.timeScale = 1;
     }
 }

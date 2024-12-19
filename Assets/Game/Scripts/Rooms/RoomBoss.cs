@@ -43,7 +43,8 @@ public class RoomBoss : MonoBehaviour
             {
                 doorclosed.transform.localScale = new Vector2(1, 1);
                 dooropen.transform.localScale = new Vector2(0, 0);
-                GameObject.Find("Boss Health Bar").transform.localScale = new Vector2(1, 1) ;
+                GameObject.Find("Boss Health Bar").transform.localScale = new Vector2(1, 1);
+                GameObject.FindWithTag("Boss").transform.localPosition = new Vector2(0, 0);
                 CombatActive = true;
                 Debug.Log("Room Event Triggered");
                 // Summon enemies

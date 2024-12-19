@@ -21,10 +21,6 @@ namespace MyGame.playerHealth
         }
         void Update()
         {
-            if (Input.GetKeyDown(KeyCode.Mouse1))
-            {
-                DamagePlayer(1);
-            }
             if (CurrentHealth <= 0)
             {
                 Time.timeScale = 0;

@@ -225,7 +225,11 @@ PrefabInstance:
     m_Modifications:
     - target: {fileID: -134248376579639222, guid: 6c6e609ac807e08439bbfa81df1ea62d, type: 3}
       propertyPath: EattackSpeed
-      value: 3.25
+      value: 1.5
+      objectReference: {fileID: 0}
+    - target: {fileID: -134248376579639222, guid: 6c6e609ac807e08439bbfa81df1ea62d, type: 3}
+      propertyPath: EbulletSpeed
+      value: 1.5
       objectReference: {fileID: 0}
     - target: {fileID: 620419977854212799, guid: 6c6e609ac807e08439bbfa81df1ea62d, type: 3}
       propertyPath: m_Name

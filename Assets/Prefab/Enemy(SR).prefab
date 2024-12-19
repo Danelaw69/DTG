@@ -227,6 +227,10 @@ PrefabInstance:
       propertyPath: m_Name
       value: SniperRifleEnemy
       objectReference: {fileID: 0}
+    - target: {fileID: 1113881869350917050, guid: 7c4d611acfc14b64bb30c96f7f401d04, type: 3}
+      propertyPath: EbulletSpeed
+      value: 3
+      objectReference: {fileID: 0}
     - target: {fileID: 4601714927750770110, guid: 7c4d611acfc14b64bb30c96f7f401d04, type: 3}
       propertyPath: m_Size.x
       value: 1.3
