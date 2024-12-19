@@ -9,7 +9,7 @@ public class ExitButton : MonoBehaviour
     // Start is called before the first frame update
     void Start()
     {
-        GameObject.Find("Options").transform.localScale = new Vector2(0, 0);
+        GameObject.Find("View Controls Menu").transform.localScale = new Vector2(0, 0);
     }
 
     // Update is called once per frame
@@ -18,7 +18,7 @@ public class ExitButton : MonoBehaviour
         if (Input.GetKeyDown(KeyCode.Escape) || OptionsMenuActive == false)
         {
             GameObject.Find("Buttons").transform.localScale = new Vector2(1, 1);
-            GameObject.Find("Options").transform.localScale = new Vector2(0, 0);
+            GameObject.Find("View Controls Menu").transform.localScale = new Vector2(0, 0);
             OptionsMenuActive = true;
         }
     }
@@ -31,21 +31,17 @@ public class ExitButton : MonoBehaviour
         Application.Quit();
         Debug.Log("Game Closed");
     }
-    public void doOptions()
+    public void doControlsMenu()
     {
         GameObject.Find("Buttons").transform.localScale = new Vector2(0, 0);
-        GameObject.Find("Options").transform.localScale = new Vector2(1, 1);
+        GameObject.Find("View Controls Menu").transform.localScale = new Vector2(1, 1);
         OptionsMenuActive = true;
 
     }
     public void doBack()
     {
         GameObject.Find("Buttons").transform.localScale = new Vector2(1, 1);
-        GameObject.Find("Options").transform.localScale = new Vector2(0, 0);
+        GameObject.Find("View Controls Menu").transform.localScale = new Vector2(0, 0);
         OptionsMenuActive = false;
-    }
-    public void doControls()
-    {
-        GameObject.Find("Options").transform.localScale = new Vector2(0, 0);
     }
 }
